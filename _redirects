@@ -1,6 +1,4 @@
 # Clean URLs - remove .html extension
-/photodigitization   /photodigitization.html   200
-/success             /success.html             200
 /dadjokes            /dadjokes.html            200
 
 # Custom 404 page
