@@ -10,41 +10,84 @@
 
       gtag('config', 'G-CZVYVW5RX2');
     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Walter Michelin</title>
+    <title>Walter Michelin — Software Engineer</title>
+    <meta name="description" content="Walter Michelin — software engineer building reliable backend systems in Python, Go, and JavaScript, with a focus on AI and large language models.">
+    <link rel="canonical" href="https://waltermichelin.com/">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://waltermichelin.com/">
+    <meta property="og:title" content="Walter Michelin — Software Engineer">
+    <meta property="og:description" content="Software engineer building reliable backend systems in Python, Go, and JavaScript, with a focus on AI and large language models.">
+    <meta property="og:image" content="https://waltermichelin.com/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Walter Michelin — Software Engineer">
+    <meta name="twitter:description" content="Software engineer building reliable backend systems in Python, Go, and JavaScript, with a focus on AI and large language models.">
+    <meta name="twitter:image" content="https://waltermichelin.com/og-image.png">
+
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 </head>
 <body>
-    <section class="main">
-        <div class="content">
-            <h1 class="header">Walter Michelin</h1>
-            <div class="subheader">
-                Software Engineer with 
-                <span id="years-of-experience"></span> 
-                years of experience
-            </div>
-            <span>
-                Technologies
-            </span>
-            <ul>
-                <li>Python</li>
-                <li>Go</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Cassandra, Redis</li>
-                <li>PostgreSQL</li>
-            </ul>
+    <main class="card">
+        <div class="eyebrow">Software Engineer</div>
+        <h1 class="header">Walter&nbsp;Michelin</h1>
+        <p class="lede">
+            I build reliable backend systems and the tools around them —
+            <b><span id="years-of-experience"></span> years</b> shipping
+            software in production. Lately I've been focused on <b>AI</b>,
+            building with large language models and agentic systems.
+        </p>
+
+        <div class="label">Technologies</div>
+        <div class="stack">
+            <span class="chip">Python</span>
+            <span class="chip">Go</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">React</span>
+            <span class="chip">Cassandra</span>
+            <span class="chip">Redis</span>
+            <span class="chip">PostgreSQL</span>
         </div>
-    </section>
+
+        <div class="label">AI &amp; LLMs</div>
+        <div class="stack">
+            <span class="chip">LLM applications</span>
+            <span class="chip">AI agents</span>
+            <span class="chip">RAG</span>
+            <span class="chip">Prompt engineering</span>
+            <span class="chip">Evals</span>
+        </div>
+
+        <nav class="links">
+            <a href="https://github.com/wmichelin">GitHub</a>
+            <span class="dot">/</span>
+            <a href="https://www.linkedin.com/in/wmichelin">LinkedIn</a>
+            <span class="dot">/</span>
+            <a href="mailto:wmichelin@gmail.com">Email</a>
+        </nav>
+    </main>
+
     <script>
-        const yearsOfExperienceId = 'years-of-experience';
+        // Years of experience, computed from a fixed start year.
         const yearStarted = 2014;
-        const yearsOfExperience = new Date().getFullYear() - yearStarted;
-        document.getElementById(yearsOfExperienceId).innerHTML = yearsOfExperience;
+        document.getElementById('years-of-experience').textContent =
+            new Date().getFullYear() - yearStarted;
+
+        // Track outbound link clicks in GA4.
+        document.querySelectorAll('.links a').forEach((a) => {
+            a.addEventListener('click', () => {
+                gtag('event', 'outbound_click', {
+                    link_text: a.textContent.trim(),
+                    link_url: a.href,
+                });
+            });
+        });
     </script>
 </body>
 </html>
