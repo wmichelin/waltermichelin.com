@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Staging — Design Directions · Walter Michelin</title>
+    <style>
+        :root {
+            --bg: #f4f2ee; --surface: #fff; --fg: #1c1b19; --muted: #6b6760; --line: #e3dfd7; --accent: #c0492f;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root { --bg: #16150f; --surface: #1f1e17; --fg: #ece8df; --muted: #9a958a; --line: #2c2a20; --accent: #e8896f; }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg); color: var(--fg);
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5; padding: 7vh 24px; display: flex; justify-content: center;
+        }
+        .wrap { width: 100%; max-width: 760px; }
+        .eyebrow { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
+        h1 { font-size: clamp(32px, 6vw, 46px); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 12px; }
+        .sub { color: var(--muted); margin-bottom: 40px; max-width: 56ch; }
+        .grid { display: grid; gap: 16px; }
+        a.option {
+            display: flex; justify-content: space-between; align-items: center; gap: 16px;
+            text-decoration: none; color: var(--fg); background: var(--surface);
+            border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px;
+            transition: border-color .15s, transform .15s;
+        }
+        a.option:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .option h2 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+        .option p { color: var(--muted); font-size: 15px; }
+        .num { font-size: 13px; color: var(--accent); font-weight: 700; letter-spacing: .1em; }
+        .arrow { color: var(--accent); font-size: 22px; }
+        .foot { margin-top: 36px; font-size: 14px; color: var(--muted); }
+        .foot a { color: var(--fg); }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="eyebrow">Staging · Design Review</div>
+        <h1>Three directions for the site</h1>
+        <p class="sub">Same content, three personalities. Open each on desktop and mobile, then tell me which direction to take to production (or mix &amp; match).</p>
+
+        <div class="grid">
+            <a class="option" href="design-1-refined.html">
+                <div>
+                    <div class="num">01</div>
+                    <h2>Refined Minimal</h2>
+                    <p>Your current minimalist ethos, elevated — better type, an accent color, real links. Safe, fast, recruiter-friendly.</p>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+            <a class="option" href="design-2-terminal.html">
+                <div>
+                    <div class="num">02</div>
+                    <h2>Terminal</h2>
+                    <p>A developer terminal window — monospace, prompt, command output. Playful and unmistakably an engineer.</p>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+            <a class="option" href="design-3-editorial.html">
+                <div>
+                    <div class="num">03</div>
+                    <h2>Editorial Bold</h2>
+                    <p>Big expressive typography, gradient accent, "open to work" cue. Modern portfolio with personality.</p>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+        </div>
+
+        <p class="foot">Reference: <a href="/">current live site →</a></p>
+    </div>
+</body>
+</html>

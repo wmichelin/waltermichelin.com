@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walter Michelin — Software Engineer</title>
+    <meta name="description" content="Walter Michelin — software engineer building reliable backend systems in Python, Go, and JavaScript.">
+    <!-- Staging mockup: no GA tag so prod analytics stay clean -->
+    <style>
+        :root {
+            --bg: #0d1117;
+            --term: #11161e;
+            --line: #232b36;
+            --fg: #c9d1d9;
+            --muted: #6e7781;
+            --green: #3fb950;
+            --cyan: #56d4dd;
+            --purple: #bc8cff;
+            --yellow: #e3b341;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background:
+                radial-gradient(1200px 600px at 50% -10%, #161d28 0%, transparent 70%),
+                var(--bg);
+            color: var(--fg);
+            font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .window {
+            width: 100%;
+            max-width: 640px;
+            background: var(--term);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            box-shadow: 0 24px 60px rgba(0,0,0,.5);
+            overflow: hidden;
+            animation: rise .6s ease both;
+        }
+        @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+        .titlebar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 14px;
+            background: #0b0f15;
+            border-bottom: 1px solid var(--line);
+        }
+        .traffic { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; } .amber { background: #ffbd2e; } .lime { background: #27c93f; }
+        .titlebar .name { margin-left: 8px; color: var(--muted); font-size: 13px; }
+        .body { padding: 22px 22px 26px; }
+        .line { white-space: pre-wrap; }
+        .prompt { color: var(--green); }
+        .path { color: var(--cyan); }
+        .cmd { color: var(--fg); }
+        .out { color: var(--fg); }
+        .muted { color: var(--muted); }
+        .key { color: var(--purple); }
+        .val { color: var(--yellow); }
+        .block { margin: 4px 0 18px; }
+        a { color: var(--cyan); text-decoration: none; border-bottom: 1px dashed transparent; }
+        a:hover { border-color: var(--cyan); }
+        .cursor {
+            display: inline-block; width: 9px; height: 1.05em;
+            background: var(--green); vertical-align: text-bottom;
+            animation: blink 1s steps(1) infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+        .links-line a { margin-right: 4px; }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <div class="titlebar">
+            <span class="traffic red"></span>
+            <span class="traffic amber"></span>
+            <span class="traffic lime"></span>
+            <span class="name">walter@michelin: ~</span>
+        </div>
+        <div class="body">
+            <div class="line block"><span class="prompt">walter@michelin</span><span class="muted">:</span><span class="path">~</span><span class="muted">$ </span><span class="cmd">whoami</span></div>
+            <div class="line block out"><span class="key">Walter Michelin</span> — Software Engineer
+<span class="muted"># <span id="yoe"></span> years shipping production software</span></div>
+
+            <div class="line"><span class="prompt">walter@michelin</span><span class="muted">:</span><span class="path">~</span><span class="muted">$ </span><span class="cmd">cat stack.txt</span></div>
+            <div class="line block out"><span class="val">python</span>  <span class="val">go</span>  <span class="val">javascript</span>  <span class="val">react</span>
+<span class="val">cassandra</span>  <span class="val">redis</span>  <span class="val">postgresql</span></div>
+
+            <div class="line"><span class="prompt">walter@michelin</span><span class="muted">:</span><span class="path">~</span><span class="muted">$ </span><span class="cmd">ls links/</span></div>
+            <div class="line block out links-line">
+<a href="https://github.com/wmichelin">github</a>  <a href="https://www.linkedin.com/in/waltermichelin">linkedin</a>  <a href="mailto:wmichelin@gmail.com">email</a>  <a href="/dadjokes">dadjokes</a></div>
+
+            <div class="line"><span class="prompt">walter@michelin</span><span class="muted">:</span><span class="path">~</span><span class="muted">$ </span><span class="cursor"></span></div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('yoe').textContent = new Date().getFullYear() - 2014;
+    </script>
+</body>
+</html>
