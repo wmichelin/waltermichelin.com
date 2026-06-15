@@ -20,6 +20,24 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { -webkit-font-smoothing: antialiased; }
 
+/* Visible keyboard focus for interactive elements. */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 body {
     background: var(--bg);
     color: var(--fg);
@@ -77,6 +95,7 @@ h1,
 
 .label {
     font-size: 12px;
+    font-weight: 400;
     letter-spacing: .12em;
     text-transform: uppercase;
     color: var(--muted);
@@ -88,6 +107,7 @@ h1,
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 28px;
+    list-style: none;
 }
 .stack:last-of-type { margin-bottom: 40px; }
 

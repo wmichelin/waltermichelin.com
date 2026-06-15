@@ -16,18 +16,54 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Walter Michelin — Software Engineer</title>
     <meta name="description" content="Walter Michelin — software engineer building reliable backend systems in Python, Go, and JavaScript, with a focus on AI and large language models.">
+    <meta name="author" content="Walter Michelin">
+    <meta name="theme-color" content="#f4f2ee" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#16150f" media="(prefers-color-scheme: dark)">
     <link rel="canonical" href="https://waltermichelin.com/">
 
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Walter Michelin">
+    <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://waltermichelin.com/">
     <meta property="og:title" content="Walter Michelin — Software Engineer">
     <meta property="og:description" content="Software engineer building reliable backend systems in Python, Go, and JavaScript, with a focus on AI and large language models.">
     <meta property="og:image" content="https://waltermichelin.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Walter Michelin — Software Engineer">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Walter Michelin — Software Engineer">
     <meta name="twitter:description" content="Software engineer building reliable backend systems in Python, Go, and JavaScript, with a focus on AI and large language models.">
     <meta name="twitter:image" content="https://waltermichelin.com/og-image.png">
+    <meta name="twitter:image:alt" content="Walter Michelin — Software Engineer">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Walter Michelin",
+      "url": "https://waltermichelin.com/",
+      "image": "https://waltermichelin.com/og-image.png",
+      "jobTitle": "Software Engineer",
+      "description": "Software engineer building reliable backend systems in Python, Go, and JavaScript, with a focus on AI and large language models.",
+      "knowsAbout": [
+        "Python",
+        "Go",
+        "JavaScript",
+        "React",
+        "Large language models",
+        "AI agents",
+        "Retrieval-augmented generation",
+        "Prompt engineering"
+      ],
+      "sameAs": [
+        "https://github.com/wmichelin",
+        "https://www.linkedin.com/in/wmichelin"
+      ]
+    }
+    </script>
 
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
@@ -44,31 +80,31 @@
             building with large language models and agentic systems.
         </p>
 
-        <div class="label">Technologies</div>
-        <div class="stack">
-            <span class="chip">Python</span>
-            <span class="chip">Go</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">React</span>
-            <span class="chip">Cassandra</span>
-            <span class="chip">Redis</span>
-            <span class="chip">PostgreSQL</span>
-        </div>
+        <h2 class="label" id="tech-label">Technologies</h2>
+        <ul class="stack" aria-labelledby="tech-label">
+            <li class="chip">Python</li>
+            <li class="chip">Go</li>
+            <li class="chip">JavaScript</li>
+            <li class="chip">React</li>
+            <li class="chip">Cassandra</li>
+            <li class="chip">Redis</li>
+            <li class="chip">PostgreSQL</li>
+        </ul>
 
-        <div class="label">AI &amp; LLMs</div>
-        <div class="stack">
-            <span class="chip">LLM applications</span>
-            <span class="chip">AI agents</span>
-            <span class="chip">RAG</span>
-            <span class="chip">Prompt engineering</span>
-            <span class="chip">Evals</span>
-        </div>
+        <h2 class="label" id="ai-label">AI &amp; LLMs</h2>
+        <ul class="stack" aria-labelledby="ai-label">
+            <li class="chip">LLM applications</li>
+            <li class="chip">AI agents</li>
+            <li class="chip">RAG</li>
+            <li class="chip">Prompt engineering</li>
+            <li class="chip">Evals</li>
+        </ul>
 
-        <nav class="links">
+        <nav class="links" aria-label="Social and contact links">
             <a href="https://github.com/wmichelin">GitHub</a>
-            <span class="dot">/</span>
+            <span class="dot" aria-hidden="true">/</span>
             <a href="https://www.linkedin.com/in/wmichelin">LinkedIn</a>
-            <span class="dot">/</span>
+            <span class="dot" aria-hidden="true">/</span>
             <a href="mailto:wmichelin@gmail.com">Email</a>
         </nav>
     </main>
